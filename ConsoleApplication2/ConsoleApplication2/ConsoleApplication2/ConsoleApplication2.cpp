@@ -67,10 +67,10 @@ int main(int argc, char* argv[])
     HANDLE hThread;
     hThread = pi.hThread;
 
-    //nject dll
+    //inject dll
     InjectDll(dwPID, DEF_DLL_PATH);
 
-    // 대상프로세스에 스레드를 실행 
+    // suspend 상태를 해제한다.
     ResumeThread(hThread);
     system("PAUSE");
     return EXIT_SUCCESS;
